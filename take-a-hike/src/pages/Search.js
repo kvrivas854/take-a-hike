@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import SearchForm from "../components/SearchForm";
+import Card from "../components/Card";
 
 class Search extends Component {
     state = {
