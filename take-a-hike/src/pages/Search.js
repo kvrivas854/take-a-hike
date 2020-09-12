@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import SearchForm from "../components/SearchForm";
+import Card from "../components/Card";
 
 class Search extends Component {
     state = {
@@ -24,7 +25,7 @@ class Search extends Component {
        API.getLocation(this.state.lat, this.state.lon)
         .then(res => {
             console.log("return");
-            //console.log(res);
+            console.log(res);
             this.setState({results: res.data.trails})
         });
         API.getWeather(this.state.lat, this.state.lon)
@@ -46,9 +47,12 @@ class Search extends Component {
                 latitude={this.state.lat}
                 longitude={this.state.lon}
                />
+               
+               
                {this.state.results.map(trail=>{
-                   return <h1 key={trail.id}>{trail.name}</h1>
+                   return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall}/>
                })}
+               
                {this.state.weather.map(forecast=>{
                    return <h1 key={forecast.dt}>{forecast.pressure}</h1>
                })}
