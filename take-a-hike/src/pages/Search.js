@@ -6,7 +6,8 @@ class Search extends Component {
     state = {
         lat: "",
         lon: "",
-        results: []
+        results: [],
+        weather: []
     }
 
    handleInputChange = event => {
@@ -23,8 +24,15 @@ class Search extends Component {
        API.getLocation(this.state.lat, this.state.lon)
         .then(res => {
             console.log("return");
-            console.log(res);
+            //console.log(res);
             this.setState({results: res.data.trails})
+        });
+        API.getWeather(this.state.lat, this.state.lon)
+        .then(res => {
+            console.log("weather return");
+            //console.log(res);
+            this.setState({weather: res.data.daily})
+            console.log(this.state.weather)
         })
    }
 
@@ -40,6 +48,9 @@ class Search extends Component {
                />
                {this.state.results.map(trail=>{
                    return <h1 key={trail.id}>{trail.name}</h1>
+               })}
+               {this.state.weather.map(forecast=>{
+                   return <h1 key={forecast.dt}>{forecast.pressure}</h1>
                })}
                
            </div>
