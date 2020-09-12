@@ -9,6 +9,7 @@ function SearchForm(props) {
           value={props.lat}
           onChange={props.handleInputChange}
           type="text"
+          name="lat"
           className="form-control"
           id="lat"
         />
@@ -17,6 +18,7 @@ function SearchForm(props) {
           value={props.lon}
           onChange={props.handleInputChange}
           type="text"
+          name="lon"
           className="form-control"
           id="lon"
         />
