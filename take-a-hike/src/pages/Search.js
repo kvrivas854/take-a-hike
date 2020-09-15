@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import SearchForm from "../components/SearchForm";
 import SearchCity from "../components/SearchCity";
 import Card from "../components/Card";
 
@@ -20,26 +19,6 @@ class Search extends Component {
    };
 
    handleFormSubmit = event => {
-       event.preventDefault();
-       console.log("event");
-       console.log(this.state.lat);
-       console.log(this.state.lon);
-       API.getLocation(this.state.lat, this.state.lon)
-        .then(res => {
-            console.log("return");
-            console.log(res);
-            this.setState({results: res.data.trails})
-        });
-        API.getWeather(this.state.lat, this.state.lon)
-        .then(res => {
-            console.log("weather return");
-            //console.log(res);
-            this.setState({weather: res.data.daily})
-            console.log(this.state.weather)
-        })
-   }
-
-   handleFormSubmit2 = event => {
     event.preventDefault();
     API.getGeo(this.state.place)
      .then(res => {
@@ -75,19 +54,12 @@ class Search extends Component {
            <div>
             <h1>Search location by name!</h1>
                <SearchCity
-                handleFormSubmit={this.handleFormSubmit2}
+                handleFormSubmit={this.handleFormSubmit}
                 place={this.state.place}
                 handleInputChange={this.handleInputChange}
                />
 
-               <h1>Showing results for {this.state.place}</h1>
-               {/* <SearchForm
-                handleFormSubmit={this.handleFormSubmit}
-                handleInputChange={this.handleInputChange}
-                // latitude={this.state.lat}
-                // longitude={this.state.lon}
-               /> */}
-               
+               <h1>Showing results for {this.state.place}</h1>               
                
                {this.state.results.map(trail=>{
                    return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall}/>
