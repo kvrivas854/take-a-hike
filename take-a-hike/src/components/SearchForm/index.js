@@ -4,7 +4,7 @@ function SearchForm(props) {
   return (
     <form className="search">
       <div className="form-group">
-        <label htmlFor="lat">Latitude:</label>
+        {/* <label htmlFor="lat">Latitude:</label>
         <input
           value={props.lat}
           onChange={props.handleInputChange}
@@ -21,7 +21,7 @@ function SearchForm(props) {
           name="lon"
           className="form-control"
           id="lon"
-        />
+        /> */}
         {/* <datalist id="breeds">
           {props.breeds.map(breed => (
             <option value={breed} key={breed} />
