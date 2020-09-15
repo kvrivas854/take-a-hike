@@ -8,12 +8,16 @@ import './App.css';
 console.log(process.env.REACT_APP_API_KEY);
 
 const App = () => (
-  
-  <div>
-    <Header/>
+
+  <div className="flex">
+
+  <Header/>
+
     <Search/>
+  <div>
     
-</div>
+    
+
 );
 
 export default App;
