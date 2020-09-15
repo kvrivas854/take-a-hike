@@ -39,7 +39,8 @@ class Search extends Component {
 
    render() {
        return (
-           <div>
+           <div className="flex w-full">
+                <div className="w-3/4">
                <h1>Search location by latitude and longitude</h1>
                <SearchForm
                 handleFormSubmit={this.handleFormSubmit}
@@ -50,12 +51,14 @@ class Search extends Component {
                
                
                {this.state.results.map(trail=>{
-                   return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall}/>
+                   return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
                })}
-               
+               </div>
+               <div className="w-1/4">
                {this.state.weather.map(forecast=>{
                    return <h1 key={forecast.dt}>{forecast.pressure}</h1>
                })}
+               </div>
                
            </div>
        )
