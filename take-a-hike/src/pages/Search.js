@@ -52,7 +52,7 @@ class Search extends Component {
    render() {
        return (
 
-
+        <div>
            <div>
 
        
@@ -66,12 +66,15 @@ class Search extends Component {
                 place={this.state.place}
                 handleInputChange={this.handleInputChange}
                />
+                </form>
+
 
                <h1 className="text-white py-2">Showing results for: <br/> {this.state.place}</h1>               
                
                {this.state.results.map(trail=>{
                    return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
                })}
+
                </div>
                <div className="w-1/4">
                {this.state.weather.map(forecast=>{
@@ -82,7 +85,7 @@ class Search extends Component {
                
            </div>
 
-               </form>
+
               
 
        )
