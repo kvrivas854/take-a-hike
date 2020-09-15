@@ -9,7 +9,7 @@ console.log(process.env.REACT_APP_API_KEY);
 
 const App = () => (
 
-  <div className="flex">
+  <div>
 
   <Header/>
 

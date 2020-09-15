@@ -54,9 +54,6 @@ class Search extends Component {
 
         <div>
            <div>
-
-       
-            
             
             <form class="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
 
