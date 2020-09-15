@@ -51,40 +51,32 @@ class Search extends Component {
 
    render() {
        return (
+        <div className="flex">
+           <div className="w-3/4">
+                <form class="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
 
-        <div>
-           <div>
-            
-            <form class="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
-
-               <SearchCity
-
+                <SearchCity
                 handleFormSubmit={this.handleFormSubmit}
                 place={this.state.place}
                 handleInputChange={this.handleInputChange}
                />
+
                 </form>
 
-
-               <h1 className="text-white py-2">Showing results for: <br/> {this.state.place}</h1>               
-               
+               <h1 className="text-white py-2">Showing results for: <br/> {this.state.place}</h1>     
+           
                {this.state.results.map(trail=>{
                    return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
                })}
-
-               </div>
-               <div className="w-1/4">
+            </div>
+               
+            <div className="w-1/4">
                {this.state.weather.map(forecast=>{
                    return <h1 key={forecast.dt}>{forecast.pressure}</h1>
                })}
 
-               </div>
-               
-           </div>
-
-
-              
-
+            </div>
+        </div>     
        )
    }
 }
