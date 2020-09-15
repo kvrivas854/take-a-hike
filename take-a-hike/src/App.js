@@ -14,7 +14,7 @@ const App = () => (
   <Header/>
 
     <Search/>
-  <div>
+  </div>
     
     
 
