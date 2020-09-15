@@ -51,15 +51,18 @@ class Search extends Component {
 
    render() {
        return (
-           <div>
-            <h1>Search location by name!</h1>
+
+       
+            
+            
+            <form class="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
                <SearchCity
                 handleFormSubmit={this.handleFormSubmit}
                 place={this.state.place}
                 handleInputChange={this.handleInputChange}
                />
 
-               <h1>Showing results for {this.state.place}</h1>               
+               <h1 className="text-white py-2">Showing results for: <br/> {this.state.place}</h1>               
                
                {this.state.results.map(trail=>{
                    return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall}/>
@@ -68,8 +71,9 @@ class Search extends Component {
                {this.state.weather.map(forecast=>{
                    return <h1 key={forecast.dt}>{forecast.pressure}</h1>
                })}
-               
-           </div>
+               </form>
+              
+           
        )
    }
 }
