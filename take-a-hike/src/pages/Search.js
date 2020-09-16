@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import SearchCity from "../components/SearchCity";
 import Card from "../components/Card";
+import WeatherCard from "../components/WeatherCard";
 
 class Search extends Component {
     state = {
@@ -77,7 +78,7 @@ class Search extends Component {
                
             <div className="w-1/4">
                {this.state.weather.map(forecast=>{
-                   return <h1 key={forecast.dt}>{forecast.pressure}</h1>
+                   return <WeatherCard key={forecast.dt} pressure={forecast.pressure} humidity={forecast.humidity} main={forecast.weather[0].description} dayTemp={forecast.temp.day} eveTemp={forecast.temp.eve}/>
                })}
 
             </div>

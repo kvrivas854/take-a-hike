@@ -2,6 +2,7 @@ import React from "react";
 
 
 function Card(props) {
+
     return (
 
     <div class="w-1/2">
@@ -10,6 +11,7 @@ function Card(props) {
                 backgroundImage: props.image ? `url(${props.image})` : "none"}}>
             </div> */}
             <img className="p-6 m-2 w-54 h-54 border shadow-lg rounded" src={props.image} alt ="error: not found"></img>
+
 
             <div className="bg-green-700 px-6 py-4">
                 <div className="font-bold text-black text-xl mb-2">{props.trailName}</div>
