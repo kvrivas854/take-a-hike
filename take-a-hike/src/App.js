@@ -10,10 +10,8 @@ console.log(process.env.REACT_APP_API_KEY);
 const App = () => (
 
   <div>
-
-  <Header/>
-
-    <Search/>
+    <Header/>
+      <Search/>
   </div>
     
     
