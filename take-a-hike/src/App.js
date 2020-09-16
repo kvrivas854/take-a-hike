@@ -7,25 +7,14 @@ import './App.css';
 
 console.log(process.env.REACT_APP_API_KEY);
 
-
-var d = new Date();
-document.write(d.getDate());
-//console.log(d);
-
-d.toString().split(" ");
-console.log(d);
-
 const App = () => (
 
   <div>
-
-  <Header/>
+    <Header/>
 
     <Search/>
   </div>
     
-    
-
 );
 
 export default App;

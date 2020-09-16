@@ -15,7 +15,7 @@ function SearchCity (props) {
           id="place"
         />
 
-        <button class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 ml-4 border-b-4 border-green-700 hover:border-blue-500 rounded" type="submit" onClick={props.handleFormSubmit}>
+        <button className="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 ml-4 border-b-4 border-green-700 hover:border-blue-500 rounded" type="submit" onClick={props.handleFormSubmit}>
           Search
         </button>
         </div>

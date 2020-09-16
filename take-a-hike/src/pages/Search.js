@@ -54,7 +54,7 @@ class Search extends Component {
        return (
         <div className="flex">
            <div className="w-3/4">
-                <form class="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
+                <form className="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
 
                 <SearchCity
                 handleFormSubmit={this.handleFormSubmit}
