@@ -2,13 +2,9 @@ import React from "react";
 
 
 function Card(props) {
-    return (
-
-        
+    return (       
         <div className=" py-4 max-w-sm rounded overflow-hidden shadow-lg">
-            {/* <div className="w-full" style={{
-                backgroundImage: props.image ? `url(${props.image})` : "none"}}>
-            </div> */}
+            
             <img className="w-full rounded" src={props.image} alt ="error: not found"></img>
 
             <div className="px-6 py-4">
