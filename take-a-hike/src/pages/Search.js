@@ -65,10 +65,15 @@ class Search extends Component {
                 </form>
 
                <h1 className="text-white py-2">Showing results for: <br/> {this.state.place}</h1>     
-           
+               <div className="flex flex-wrap mb-4">
                {this.state.results.map(trail=>{
-                   return <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
-               })}
+                   return ( 
+                   <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
+                  
+                   )
+                })}
+                 </div>
+               )
             </div>
                
             <div className="w-1/4">

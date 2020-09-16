@@ -18,10 +18,8 @@ console.log(d);
 const App = () => (
 
   <div>
-
-  <Header/>
-
-    <Search/>
+    <Header/>
+      <Search/>
   </div>
     
     
