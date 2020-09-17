@@ -78,7 +78,7 @@ class Search extends Component {
                
             <div className="w-1/4">
                {this.state.weather.map(forecast=>{
-                   return <WeatherCard key={forecast.dt} pressure={forecast.pressure} humidity={forecast.humidity} main={forecast.weather[0].description} dayTemp={forecast.temp.day} eveTemp={forecast.temp.eve}/>
+                   return <WeatherCard key={forecast.dt} dt={forecast.dt} pressure={forecast.pressure} humidity={forecast.humidity} main={forecast.weather[0].description} dayTemp={forecast.temp.day} eveTemp={forecast.temp.eve}/>
                })}
 
             </div>

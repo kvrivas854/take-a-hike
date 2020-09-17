@@ -14,7 +14,7 @@ function Card(props) {
 
 
             <div className="bg-green-700 px-6 py-4">
-                <div className="font-bold text-black text-xl mb-2">{props.trailName}</div>
+                <div className="font-bold text-white text-xl mb-2">{props.trailName}</div>
                  <p className="text-white rounded bg-green-300 p-4 text-base">{props.summary}</p>
             </div>
 
