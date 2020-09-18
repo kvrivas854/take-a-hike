@@ -1,6 +1,6 @@
 const trailSeed = [
     {
-        ID: 7011192,
+        trailID: 7011192,
         Name: "Boulder Skyline Traverse",
         Summary: "The classic long mountain route in Boulder.",
         Stars: 4.7,
@@ -10,7 +10,7 @@ const trailSeed = [
         ConditionStatus: "All Clear"
     },
     {
-        ID: 7004226,
+        trailID: 7004226,
         Name: "Sunshine Lion's Lair Loop",
         Summary: "Great Mount Sanitas views are the reward for this gentler loop in Sunshine Canyon.",
         Stars: 4.5,
@@ -20,7 +20,7 @@ const trailSeed = [
         ConditionStatus: "All Clear"
     },
     {
-        ID: 7031419,
+        trailID: 7031419,
         Name: "Breakneck Ridge Bypass",
         Summary: "Breakneck Ridge with a bypass that makes for a shorter hike.",
         Stars: 4.8,
