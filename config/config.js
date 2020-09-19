@@ -2,7 +2,7 @@ module.exports = {
   config: {
     "development": {
       "username": "root",
-      "password": process.env.MYSQL_PASSWORD,
+      "password": "PcC#906652727",
       "database": "takeahikedb",
       "host": "127.0.0.1",
       "port": 3306,
