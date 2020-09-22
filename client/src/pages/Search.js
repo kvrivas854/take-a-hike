@@ -52,8 +52,7 @@ class Search extends Component {
 
    render() {
        return (
-        <div className="flex">
-           <div className="w-3/4">
+            <div>
                 <form className="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
 
                 <SearchCity
@@ -61,10 +60,12 @@ class Search extends Component {
                 place={this.state.place}
                 handleInputChange={this.handleInputChange}
                />
-
                 </form>
 
-               <h1 className="text-white py-2">Showing results for: <br/> {this.state.place}</h1>     
+               <h1 className="text-black align-center py-2">Showing results for: <br/> {this.state.place}</h1> 
+               
+               <div className="flex">
+           <div className="w-2/3">    
                <div className="flex flex-wrap mb-4">
                {this.state.results.map(trail=>{
                    return ( 
@@ -73,16 +74,18 @@ class Search extends Component {
                    )
                 })}
                  </div>
-               )
+               
             </div>
                
-            <div className="w-1/4">
+            <div className="w-1/3">
                {this.state.weather.map(forecast=>{
                    return <WeatherCard key={forecast.dt} dt={forecast.dt} pressure={forecast.pressure} humidity={forecast.humidity} main={forecast.weather[0].description} dayTemp={forecast.temp.day} eveTemp={forecast.temp.eve} ascent={forecast.ascent} condition={forecast.conditionStatus} length={forecast.length}/>
                })}
 
             </div>
-        </div>     
+        </div>
+        </div>
+             
        )
    }
 }
