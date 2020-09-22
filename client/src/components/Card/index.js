@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 
 function Card(props) {
@@ -6,11 +7,11 @@ function Card(props) {
     return (
 
     <div class="w-1/2">
-    <div className="px-4 py-4 max-w-sm border rounded overflow-hidden shadow-lg pl-4 ml-6 mb-6">
+    <div className="p-4 m-6 max-w-sm border rounded overflow-hidden shadow-lg">
             {/* <div className="w-full" style={{
                 backgroundImage: props.image ? `url(${props.image})` : "none"}}>
             </div> */}
-            <img className="p-6 m-2 w-54 h-54 border shadow-lg rounded" src={props.image} alt ="error: not found"></img>
+            <img className="w-54 h-54 border shadow-lg rounded" src={props.image} alt ="error: not found"></img>
 
 
             <div className="bg-green-700 px-6 py-4">
