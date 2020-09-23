@@ -57,4 +57,14 @@ router.delete("/api/trails/:id", function(req, res) {
     });
   });
 
+  router.post("/login",  (req, res) => {
+    console.log("made it to the BACKEDN!!!")
+    // Sending back a password, even a hashed password, isn't a good idea
+    console.log(req.user);
+    // res.json({
+    //   username: req.user.username,
+    //   id: req.user.id
+    // });
+  });
+
 module.exports = router

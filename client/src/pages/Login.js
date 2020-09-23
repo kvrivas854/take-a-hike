@@ -17,6 +17,8 @@ function Login(props) {
     },[auth])
 
 function handleInputChange(e){
+    console.log("input change is happening")
+    console.log(e.target.value)
 let name = e.target.name
     switch(name){
         case "username":
@@ -31,6 +33,9 @@ let name = e.target.name
 
 function handleSubmit(e){
     e.preventDefault()
+    console.log("it has been submitted")
+    console.log(username)
+    console.log(password)
   //this is where we would do an api call to utils/API.js and then a post route to express backend
   let data={
       username:username,
@@ -38,9 +43,9 @@ function handleSubmit(e){
   }
   API.login(data).then(response=>{
       console.log(response)
-      if(response){
-          setAuth(true)
-      }
+    //   if(response){
+    //       setAuth(true)
+    //   }
   })
 
 }
@@ -48,7 +53,7 @@ function handleSubmit(e){
   
     return (
       <div>
-        <Form handleInputChange={handleInputChange} handleSubmit={handleSubmit}/>
+        <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
         
         
       </div>
