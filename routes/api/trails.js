@@ -1,6 +1,7 @@
-var db = require("../../models")
-var router = require('express').Router()
-const passport = require("../../config/passport")
+var db = require("../../models");
+var router = require('express').Router();
+const passport = require("../../config/passport");
+const LocalStrategy = require("passport-local").Strategy;
 
 // const booksController = require("../../controllers/booksController");
 
@@ -39,13 +40,11 @@ router.delete("/api/trails/:id", function(req, res) {
     });
   });
   
-  router.post("/api/login",passport.authenticate('local'),(req,res)=>{
-if(req.user){
-  res.json({username:req.user.username,id:req.user.id})
-}
-     
-   
-  })
+//   router.post("/api/login",passport.authenticate('local'),(req,res)=>{
+// if(req.user){
+//   res.json({username:req.user.username,id:req.user.id})
+// }  
+//   })
   router.put("/api/trails/:id", function(req, res) {
     db.Trail.update(
       req.body,

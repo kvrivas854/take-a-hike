@@ -2,7 +2,7 @@ module.exports = {
   config: {
     "development": {
       "username": "root",
-      "password": "PcC#906652727",
+      "password": process.env.dbpassword,
       "database": "takeahikedb",
       "host": "127.0.0.1",
       "port": 3306,
