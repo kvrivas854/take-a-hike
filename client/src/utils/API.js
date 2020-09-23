@@ -29,6 +29,7 @@ export default {
     }
     ,
     login:function(data){
+        console.log("MADE IT TO THE LOGIN ROUTE")
         return axios.post("/api/login", data)
     }
 }

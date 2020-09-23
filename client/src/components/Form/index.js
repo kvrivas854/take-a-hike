@@ -7,7 +7,7 @@ return (
     <div>
         <h2>Login</h2>
   
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={props.handleSubmit()}>
     
           <input
             className="form-control"
@@ -24,7 +24,7 @@ return (
             name="password"
             onChange={props.handleInputChange}
           />
-<input type="submit" value="submit"/>
+        <input type="submit" value="submit"/>
         </form>
     </div>
 )
