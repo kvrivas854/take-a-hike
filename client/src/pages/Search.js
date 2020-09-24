@@ -66,11 +66,11 @@ class Search extends Component {
                
                <div className="flex">
            <div className="w-2/3">    
-               <div className="flex flex-wrap mb-4">
+               <div className="flex flex-wrap object-none object-center mb-4">
                {this.state.results.map(trail=>{
-                   return ( 
+                   return (
                    <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
-                  
+                    
                    )
                 })}
                  </div>
