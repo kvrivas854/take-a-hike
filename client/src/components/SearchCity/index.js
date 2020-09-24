@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchCity (props) {
   return (
-    <form className="search">
+    <div className="search open-sans">
       <div className="form-group">
         <div className="flex flex-wrap justify-evenly">
         <label htmlFor="lat" className="text-white px-2">Search for a place: </label>
@@ -20,7 +20,7 @@ function SearchCity (props) {
         </button>
         </div>
       </div>
-    </form>
+    </div>
   );
 }
 

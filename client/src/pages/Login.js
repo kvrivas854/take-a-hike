@@ -22,11 +22,14 @@ function handleInputChange(e){
 let name = e.target.name
     switch(name){
         case "username":
-            setUsername(e.target.value)
+            setUsername(e.target.value);
             break;
             case "password":
-                setPassword(e.target.value)
+                setPassword(e.target.value);
                 break;
+                default: 
+                  console.log('NaN');
+                  break;
     }
 
 }
