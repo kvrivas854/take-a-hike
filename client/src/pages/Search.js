@@ -4,6 +4,7 @@ import SearchCity from "../components/SearchCity";
 import Card from "../components/Card";
 import WeatherCard from "../components/WeatherCard";
 
+
 class Search extends Component {
     state = {
         lat: "",
@@ -62,7 +63,7 @@ class Search extends Component {
                />
                 </form>
 
-               <h1 className="text-black align-center py-2">Showing results for: <br/> {this.state.place}</h1> 
+               <h1 className="open-sans text-black align-center py-2">Showing results for: <br/> {this.state.place}</h1> 
                
                <div className="flex">
            <div className="w-2/3">    
@@ -81,7 +82,6 @@ class Search extends Component {
                {this.state.weather.map(forecast=>{
                    return <WeatherCard key={forecast.dt} dt={forecast.dt} pressure={forecast.pressure} humidity={forecast.humidity} main={forecast.weather[0].description} dayTemp={forecast.temp.day} eveTemp={forecast.temp.eve} ascent={forecast.ascent} condition={forecast.conditionStatus} length={forecast.length}/>
                })}
-
             </div>
         </div>
         </div>

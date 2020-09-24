@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css"
+
 function SearchCity (props) {
   return (
-    <div className="search">
+    <div className="search open-sans">
       <div className="form-group">
         <div className="flex flex-wrap justify-evenly">
         <label htmlFor="lat" className="text-white px-2">Search for a place: </label>

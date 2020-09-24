@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
 .App {
   text-align: center;
 }
@@ -38,4 +40,12 @@
 }
 .align-center {
   text-align: center;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lobster {
+    font-family: 'Lobster', cursive;
 }
