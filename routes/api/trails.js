@@ -58,7 +58,7 @@ router.delete("/api/trails/:id", function(req, res) {
   });
 
   router.post("/login",  (req, res) => {
-    console.log("made it to the BACKEDN!!!")
+    console.log("made it to the BACKEND!!!")
     // Sending back a password, even a hashed password, isn't a good idea
     console.log(req.user);
     // res.json({

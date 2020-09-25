@@ -5,12 +5,12 @@ function Form(props) {
 
 return (
     <div>
-        <h2>Login</h2>
+        <h2 className="text-white container flex">Login</h2>
   
-        <form onSubmit={props.handleSubmit()}>
+        <form className="" onSubmit={props.handleSubmit()}>
     
           <input
-            className="form-control"
+            className="form-control px-4 m-4 flex flex-col rounded-full"
             type="text"
             placeholder="Username"
             name="username"
@@ -18,13 +18,13 @@ return (
           />
       
           <input
-            className="form-control"
+            className="form-control px-4 m-4 flex flex-col rounded-full"
             type="password"
             placeholder="Password"
             name="password"
             onChange={props.handleInputChange}
           />
-        <input type="submit" value="submit"/>
+        <input className="flex-col px-4 m-4 rounded-full" type="submit" value="submit"/>
         </form>
     </div>
 )
