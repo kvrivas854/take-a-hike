@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Form from "../components/Signup/Form";
 import { Redirect } from "react-router-dom";
-​
+
 function RegistrationForm(props) {
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
