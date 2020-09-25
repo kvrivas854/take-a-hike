@@ -26,7 +26,6 @@ function App() {
 
 return ( 
   <Router>
-    <div>
    <Header />
    <Switch>
    <Route exact path="/login">
@@ -38,8 +37,7 @@ return (
    </Route>
    
    </Switch>
-​
-   </div>
+
  </Router>
 );  
 }
