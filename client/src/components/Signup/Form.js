@@ -10,7 +10,6 @@ function Form(props) {
                        className="form-control" 
                        name="username" 
                        placeholder="Enter Username" 
-                       value={state.username}
                        onChange={props.handleInputChange}
                 />
                 
@@ -20,7 +19,6 @@ function Form(props) {
                         className="form-control" 
                         name="password" 
                         placeholder="Password"
-                        value={state.password}
                         onChange={props.handleInputChange} 
                     />
                 </div>

@@ -21,7 +21,20 @@ function RegistrationForm(props) {
                 break;
         }
     
-    }
+    };
+
+    function handleSubmit(e){
+        e.preventDefault()
+        console.log("it has been submitted")
+        console.log(username)
+        console.log(password)
+      //this is where we would do an api call to utils/API.js and then a post route to express backend
+      let data={
+          username:username,
+          password:password
+      }
+    
+    };
            
             return(
                 <div>
