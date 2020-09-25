@@ -6,7 +6,7 @@ import API from "../utils/API";
 function Login(props) {
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
-    const [auth, setAuth]=useState(false)
+    const [auth, setAuth]=useState(false);
 
 
 
