@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import Form from "../components/Signup/Form";
 import { Redirect } from "react-router-dom";
-​
+import API from "../utils/API";
+
 function RegistrationForm(props) {
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
@@ -32,13 +33,20 @@ function RegistrationForm(props) {
       let data={
           username:username,
           password:password
-      }
+      };
+
+      API.signup(data).then(response=>{
+        console.log(response)
+      //   if(response){
+      //       setAuth(true)
+      //   }
+    })
     
     };
            
             return(
                 <div>
-                <Form handleInputChange={handleInputChange}/>
+                <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
                 
                 
               </div>
