@@ -9,7 +9,7 @@ function RegistrationForm(props) {
     const [createdUser, setCreatedUser] = useState(false);
 
     if(createdUser){
-        return <Redirect to="/login"/>
+        return <Redirect to="/"/>
     }
 
 
@@ -50,7 +50,7 @@ function RegistrationForm(props) {
             return(
                 <div>
                 <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
-                <a href="/login">Existing User</a>
+                <a href="/">Existing User</a>
                 
                 </div>
             );

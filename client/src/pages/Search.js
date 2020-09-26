@@ -25,9 +25,6 @@ class Search extends Component {
     API.getGeo(this.state.place)
      .then(res => {
          console.log("potato");
-         console.log(res)
-        //  console.log(res.data.results[0].location.lat);
-        //  console.log(res.data.results[0].location.lng);
          this.setState({lat: res.data.results[0].location.lat})
          this.setState({lon: res.data.results[0].location.lng})
          this.setState({place: res.data.results[0].address})
@@ -37,7 +34,7 @@ class Search extends Component {
      }).then(() => {
      API.getLocation(this.state.lat, this.state.lon)
         .then(res => {
-            console.log("return");
+            console.log("trail return");
             console.log(res);
             this.setState({results: res.data.trails})
         });
