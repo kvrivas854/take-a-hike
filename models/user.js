@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       }
+      
     });
 
     User.prototype.validPassword = function(password) {
@@ -25,6 +26,10 @@ module.exports = function(sequelize, DataTypes) {
           null
         );
       });
+      
+    //   User.associate = function(models) {
+    //     User.belongsToMany(models.Trail, { through: "FavoriteTrails"});
+    // }
     
     return User;
   };

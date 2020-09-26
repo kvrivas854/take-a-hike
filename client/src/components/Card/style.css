@@ -1,3 +1,7 @@
 .cover {
     background-size: cover;
   }
+
+  .align-center {
+    align-self: center;
+  }
