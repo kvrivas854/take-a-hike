@@ -11,7 +11,8 @@ class Search extends Component {
         lon: "",
         results: [],
         weather: [],
-        place: ""
+        place: "",
+        trailName: ""
     }
 
    handleInputChange = event => {
@@ -20,14 +21,12 @@ class Search extends Component {
        });
    };
 
+
+
    handleFormSubmit = event => {
     event.preventDefault();
     API.getGeo(this.state.place)
      .then(res => {
-         console.log("potato");
-         console.log(res)
-        //  console.log(res.data.results[0].location.lat);
-        //  console.log(res.data.results[0].location.lng);
          this.setState({lat: res.data.results[0].location.lat})
          this.setState({lon: res.data.results[0].location.lng})
          this.setState({place: res.data.results[0].address})
@@ -35,9 +34,10 @@ class Search extends Component {
          console.log(this.state.lat)
          console.log(this.state.lon)
      }).then(() => {
+         let data={}
      API.getLocation(this.state.lat, this.state.lon)
         .then(res => {
-            console.log("return");
+            console.log("trail return");
             console.log(res);
             this.setState({results: res.data.trails})
         });
@@ -47,9 +47,27 @@ class Search extends Component {
             this.setState({weather: res.data.daily})
             console.log(this.state.weather)
         })
-     })
+    
+     }
+     
+     )
 
 }
+
+    handleClick = event => {
+        console.log(event.target.dataset.id);
+        console.log(this.state.results[event.target.dataset.id]);
+        let data={
+            trailID:this.state.results[event.target.dataset.id].id,
+            Name:this.state.results[event.target.dataset.id].name,
+            //password:password
+        }
+        API.addTrail(data).then(response=>{
+            if(response){
+            console.log("entered in database")
+            }
+        })
+    }
 
    render() {
        return (
@@ -68,9 +86,9 @@ class Search extends Component {
                <div className="flex">
            <div className="w-2/3">    
                <div className="flex flex-wrap object-none object-center mb-4">
-               {this.state.results.map(trail=>{
+               {this.state.results.map((trail, index)=>{
                    return (
-                   <Card key={trail.id} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars}/>
+                   <Card key={trail.id} index={index} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars} handleClick={this.handleClick}/>
                     
                    )
                 })}

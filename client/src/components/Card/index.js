@@ -3,7 +3,7 @@ import "./style.css"
 
 
 function Card(props) {
-
+console.log(props.index)
     return (
 
     <div class="w-1/2 text-center">
@@ -31,7 +31,7 @@ function Card(props) {
             
         </div>
 
-
+        <button data-id={props.index} onClick={props.handleClick}>Save</button>
 
         </div>
     

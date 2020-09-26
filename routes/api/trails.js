@@ -22,7 +22,7 @@ const LocalStrategy = require("passport-local").Strategy;
         })
     })
 
-    router.post("/", (req, res) => {
+    router.post("/trails", (req, res) => {
         db.Trail.create(req.body).then(function(dbTrail) {
             res.json(dbTrail)
             console.log("success")

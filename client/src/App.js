@@ -30,7 +30,7 @@ return (
     <div>
    <Header />
    <Switch>
-   <Route exact path="/login">
+   <Route exact path="/">
      <Login />
    </Route>
    <Route exact path="/mainpage">
