@@ -20,8 +20,8 @@ function Card(props) {
                  <h3 className="text-white">{props.condition}</h3>
                  <h3 className="text-white">{props.ascent}</h3>
                  <h3 className="text-white">{props.length}</h3>
-                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-  Button
+                 <button class="bg-green-200 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+  + Add to favorites
 </button>
             </div>
 
