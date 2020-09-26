@@ -12,7 +12,7 @@ const LocalStrategy = require("passport-local").Strategy;
         })
     })
 
-    router.get("/api/trails/:id", (req, res) => {
+    router.get("/:id", (req, res) => {
        db.Trail.findOne({
          where: {
             id: req.params.id
@@ -22,14 +22,14 @@ const LocalStrategy = require("passport-local").Strategy;
         })
     })
 
-    router.post("/api/trails", (req, res) => {
+    router.post("/trails", (req, res) => {
         db.Trail.create(req.body).then(function(dbTrail) {
             res.json(dbTrail)
             console.log("success")
         })
     })
 
-router.delete("/api/trails/:id", function(req, res) {
+router.delete("/:id", function(req, res) {
     // Delete the Author with the id available to us in req.params.id
     db.Trail.destroy({
       where: {
@@ -45,7 +45,7 @@ router.delete("/api/trails/:id", function(req, res) {
 //   res.json({username:req.user.username,id:req.user.id})
 // }  
 //   })
-  router.put("/api/trails/:id", function(req, res) {
+  router.put("/:id", function(req, res) {
     db.Trail.update(
       req.body,
       {
@@ -57,14 +57,24 @@ router.delete("/api/trails/:id", function(req, res) {
     });
   });
 
-  router.post("/login",  (req, res) => {
+
+  router.post("/login", passport.authenticate("local"), (req, res) => {
     console.log("made it to the BACKEND!!!")
     // Sending back a password, even a hashed password, isn't a good idea
     console.log(req.user);
-    // res.json({
-    //   username: req.user.username,
-    //   id: req.user.id
-    // });
+    res.json({
+      username: req.user.username,
+      id: req.user.id
+    });
+  });
+
+  router.post("/signup", (req, res) => {
+    // Sending back a password, even a hashed password, isn't a good idea
+    console.log(req.body);
+    console.log("signup request reached the backend")
+    db.User.create(req.body).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
 module.exports = router

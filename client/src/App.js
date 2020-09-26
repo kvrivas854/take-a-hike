@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Search from './pages/Search'
 import Login from './pages/Login'
 import './App.css';
+import RegistrationForm from './pages/Signup';
 
 console.log(process.env.REACT_APP_API_KEY);
 
@@ -28,12 +29,14 @@ return (
   <Router>
    <Header />
    <Switch>
-   <Route exact path="/login">
+   <Route exact path="/">
      <Login />
    </Route>
-   <Route exact path="/">
+   <Route exact path="/mainpage">
      <Search/>
-​
+   </Route>
+   <Route exact path="/signup">
+     <RegistrationForm />
    </Route>
    
    </Switch>

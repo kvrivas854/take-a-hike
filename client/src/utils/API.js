@@ -26,10 +26,20 @@ export default {
 
     getWeather: function (lat, lon) {
         return axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely&appid=" + process.env.REACT_APP_WEATHER_API_KEY)
-    }
-    ,
+    },
+
     login:function(data){
         console.log("MADE IT TO THE LOGIN ROUTE")
         return axios.post("/api/trails/login", data)
+
+    },
+
+    signup:function(data){
+        return axios.post("/api/trails/signup", data)
+    },
+
+    addTrail:function(data){
+        return axios.post("/api/trails/trails", data)
+
     }
 }

@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
 function Form(props) {
-
 
 return (
     <div>
@@ -24,11 +23,15 @@ return (
             name="password"
             onChange={props.handleInputChange}
           />
-        <input className="bg-green-300 text-white flex-col px-4 m-4  justify-center rounded-full" type="submit" value="submit"/>
-        </form>
-    </div>
-)
 
+
+        <input className="bg-green-300 text-white flex-col px-4 m-4  justify-center rounded-full" type="submit" value="submit"/>
+
+
+        </form>
+        
+    </div>
+  )
 }
 
 export default Form;
