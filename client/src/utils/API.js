@@ -35,5 +35,9 @@ export default {
 
     signup:function(data){
         return axios.post("/api/trails/signup", data)
+    },
+
+    addTrail:function(data){
+        return axios.post("/api/trails/trails", data)
     }
 }
