@@ -69,9 +69,11 @@ router.delete("/:id", function(req, res) {
 
   router.post("/signup", (req, res) => {
     // Sending back a password, even a hashed password, isn't a good idea
-    console.log(req);
+    console.log(req.body);
     console.log("signup request reached the backend")
-    
+    db.User.create(req.body).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
 module.exports = router

@@ -31,6 +31,7 @@ function Form(props) {
                     Register
                 </button>
             </form>
+            
         </div>
         )   
     }

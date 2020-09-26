@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Form from "../components/Signup/Form";
 import { Redirect } from "react-router-dom";
 import API from "../utils/API";
@@ -6,6 +6,12 @@ import API from "../utils/API";
 function RegistrationForm(props) {
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
+    const [createdUser, setCreatedUser] = useState(false);
+
+    if(createdUser){
+        return <Redirect to="/login"/>
+    }
+
 
     function handleInputChange(e){
         console.log("signup input change")
@@ -25,10 +31,7 @@ function RegistrationForm(props) {
     };
 
     function handleSubmit(e){
-        e.preventDefault()
-        console.log("it has been submitted")
-        console.log(username)
-        console.log(password)
+        e.preventDefault();
       //this is where we would do an api call to utils/API.js and then a post route to express backend
       let data={
           username:username,
@@ -37,9 +40,9 @@ function RegistrationForm(props) {
 
       API.signup(data).then(response=>{
         console.log(response)
-      //   if(response){
-      //       setAuth(true)
-      //   }
+        if(response){
+            setCreatedUser(true);
+        }
     })
     
     };
@@ -47,9 +50,9 @@ function RegistrationForm(props) {
             return(
                 <div>
                 <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
+                <a href="/login">Existing User</a>
                 
-                
-              </div>
+                </div>
             );
           }
           

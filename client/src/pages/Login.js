@@ -6,15 +6,13 @@ import API from "../utils/API";
 function Login(props) {
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
-    const [auth, setAuth]=useState(false);
+    const [auth, setAuth] = useState(false);
 
-
-
-    useEffect(()=>{
+    // useEffect(()=>{
         if(auth){
         return <Redirect to="/mainpage"/>
         }
-    },[auth])
+    // },[auth])
 
 function handleInputChange(e){
     console.log("input change is happening")
@@ -44,21 +42,20 @@ function handleSubmit(e){
       username:username,
       password:password
   }
+
   API.login(data).then(response=>{
       console.log(response)
-    //   if(response){
-    //       setAuth(true)
-    //   }
-  })
-
+      if(response){
+          setAuth(true)
+      }
+  });
 }
 
   
     return (
       <div>
         <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
-        
-        
+        <a href="/signup">New User</a>
       </div>
     );
   }

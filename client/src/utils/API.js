@@ -34,7 +34,6 @@ export default {
     },
 
     signup:function(data){
-        console.log("add post route for user data")
         return axios.post("/api/trails/signup", data)
     }
 }
