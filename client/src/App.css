@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap');
+:root {
+  --green-light: 
+}
 .App {
   text-align: center;
 }
@@ -48,4 +51,8 @@
 
 .lobster {
     font-family: 'Lobster', cursive;
+}
+
+.object-center {
+  object-fit: center;
 }

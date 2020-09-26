@@ -57,6 +57,7 @@ router.delete("/:id", function(req, res) {
     });
   });
 
+
   router.post("/login", passport.authenticate("local"), (req, res) => {
     console.log("made it to the BACKEND!!!")
     // Sending back a password, even a hashed password, isn't a good idea
