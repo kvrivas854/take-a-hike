@@ -77,4 +77,12 @@ router.delete("/:id", function(req, res) {
     });
   });
 
+  // router.get("/login", (req, res) => {
+  //   // Sending back a password, even a hashed password, isn't a good idea
+  //   console.log(req.body);
+  //   db.User.create(req.body).then(function(dbPost) {
+  //     res.json(dbPost);
+  //   });
+  // });
+
 module.exports = router
