@@ -14,6 +14,8 @@ module.exports = {
       'xl': '1400px',
     }
   },
-  variants: {},
+  variants: {
+    backgroundColor: ['responsive','hover','focus','active']
+  },
   plugins: [],
 }

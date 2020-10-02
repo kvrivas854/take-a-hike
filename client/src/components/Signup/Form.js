@@ -3,33 +3,36 @@ import React from "react";
 function Form(props) {
     return(
         <div>
-            <h2> Sign Up</h2>
-            <form onSubmit={props.handleSubmit()}>
-                <label>Username</label>
+            <h1 className="text-white flex justify-center"> Sign Up</h1>
+            <form className="flex flex-col text-white m-10" onSubmit={props.handleSubmit()}>
+                <div className="form-group lobster contents">
+                    
+                <label className="p-2">Username</label>
                  <input type="username" 
-                       className="form-control" 
+                       className="form-control text-black px-4  flex justify-center rounded-full focus: outline-none focus:shadow-outline" 
                        name="username" 
                        placeholder="Enter Username" 
                        onChange={props.handleInputChange}
                 />
                 
-                <div className="form-group text-left">
-                    <label htmlFor="exampleInputPassword1">Password</label>
+                
+                    <label className="p-2" htmlFor="exampleInputPassword1">Password</label>
                     <input type="password" 
-                        className="form-control" 
+                        className="form-control px-4 text-black flex justify-center rounded-full focus: outline-none focus:shadow-outline" 
                         name="password" 
                         placeholder="Password"
                         onChange={props.handleInputChange} 
                     />
-                </div>
+               
                 
                 <button 
                     type="submit" 
-                    className="btn btn-primary"
+                    className="bg-green-300 text-white px-4 m-4 justify-center rounded-full hover:bg-green-500 focus: outline-none focus:shadow-outline"
                     onClick={props.handleSubmit}
                 >
                     Register
                 </button>
+                </div>
             </form>
             
         </div>
