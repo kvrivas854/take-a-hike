@@ -53,7 +53,7 @@ function handleSubmit(e){
 
   
     return (
-      <div>
+      <div className="flex justify-center">
           {/* <nav className="container  items-center  flex-wrap border rounded-full bg-green-900 p-6 mt-8"> */}
           <nav className="container flex flex-col lobster justify-center bg-green-900 box-border sm:box-content px-4 pt-10 pb-20 m-6 max-w-sm border rounded-lg shadow-lg">
   <div className="flex flex-col items-center flex-shrink-0 text-white" >
@@ -61,11 +61,11 @@ function handleSubmit(e){
     <Link to="/" className="items-center text-xl tracking-tight">Take a Hike</Link>
   </div>
         <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
-
+        <a className="flex text-white justify-center"href="/signup">Don't have an account? Click here to sign up!</a>
         </nav>
         
 
-        <a href="/signup">New User</a>
+        
       </div>
     );
   }

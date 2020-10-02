@@ -35,7 +35,9 @@ return (
    <Route exact path="/mainpage">
      <Search/>
    </Route>
-   <Route exact path="/signup">
+   <Route exact path="/signup" render={(props) => (
+     <RegistrationForm {...props} isAuthed={true}/>
+   )}>
      <RegistrationForm />
    </Route>
    
