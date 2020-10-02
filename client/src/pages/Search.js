@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import API from "../utils/API";
 import SearchCity from "../components/SearchCity";
 import Card from "../components/Card";
 import WeatherCard from "../components/WeatherCard";
+import Login from "./Login";
 
 
 class Search extends Component {
@@ -12,7 +13,8 @@ class Search extends Component {
         results: [],
         weather: [],
         place: "",
-        trailName: ""
+        trailName: "",
+        user: this.props.user
     }
 
    handleInputChange = event => {
@@ -47,24 +49,35 @@ class Search extends Component {
             this.setState({weather: res.data.daily})
             console.log(this.state.weather)
         })
-    
      }
-     
      )
-
 }
+
 
     handleClick = event => {
         console.log(event.target.dataset.id);
         console.log(this.state.results[event.target.dataset.id]);
         let data={
+            username: this.props.user,
             trailID:this.state.results[event.target.dataset.id].id,
             Name:this.state.results[event.target.dataset.id].name,
+            Summary:this.state.results[event.target.dataset.id].summary,
+            Stars:this.state.results[event.target.dataset.id].stars,
+            Location:this.state.results[event.target.dataset.id].location,
+            Ascent:this.state.results[event.target.dataset.id].ascent,
+            Length:this.state.results[event.target.dataset.id].length,
+            ConditionStatus:this.state.results[event.target.dataset.id].conditionStatus
             //password:password
         }
+        console.log(data)
         API.addTrail(data).then(response=>{
             if(response){
             console.log("entered in database")
+            }
+        })
+        API.getSaved(data).then(response => {
+            if (response) {
+                console.log(response)
             }
         })
     }

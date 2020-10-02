@@ -6,8 +6,12 @@ const LocalStrategy = require("passport-local").Strategy;
 // const booksController = require("../../controllers/booksController");
 
 
-    router.get("/api/trails", (req, res) => {
-        db.Trail.findAll({}).then(function(dbTrail) {
+    router.post("/saved", (req, res) => {
+        db.Trail.findAll({
+          where: {
+            username: req.body.username
+          }
+        }).then(function(dbTrail) {
          res.json(dbTrail)
         })
     })
@@ -76,5 +80,13 @@ router.delete("/:id", function(req, res) {
       res.json(dbPost);
     });
   });
+
+  // router.get("/login", (req, res) => {
+  //   // Sending back a password, even a hashed password, isn't a good idea
+  //   console.log(req.body);
+  //   db.User.create(req.body).then(function(dbPost) {
+  //     res.json(dbPost);
+  //   });
+  // });
 
 module.exports = router
