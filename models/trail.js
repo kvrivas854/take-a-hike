@@ -10,8 +10,6 @@ module.exports = function(sequelize, DataTypes) {
       Length: DataTypes.DECIMAL,
       ConditionStatus: DataTypes.STRING
       
-
-    
       // saved: {
       //   type: DataTypes.BOOLEAN,
       //   defaultValue: false

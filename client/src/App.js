@@ -20,10 +20,10 @@ return (
    <Route exact path="/" render={(props) => (
      <Login {...props} setUser={setUser} />
    )}>
-
    </Route>
-   <Route exact path="/mainpage" >
-     <Search props={user, setUser}/>
+   <Route exact path="/mainpage" render={(props) => (
+    <Search {...props} user={user} />
+   )}>
    </Route>
    <Route exact path="/signup">
      <RegistrationForm />

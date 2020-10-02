@@ -6,8 +6,12 @@ const LocalStrategy = require("passport-local").Strategy;
 // const booksController = require("../../controllers/booksController");
 
 
-    router.get("/api/trails", (req, res) => {
-        db.Trail.findAll({}).then(function(dbTrail) {
+    router.post("/saved", (req, res) => {
+        db.Trail.findAll({
+          where: {
+            username: req.body.username
+          }
+        }).then(function(dbTrail) {
          res.json(dbTrail)
         })
     })

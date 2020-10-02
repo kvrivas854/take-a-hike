@@ -47,7 +47,7 @@ function handleSubmit(e){
       console.log(response)
       if(response){
           setAuth(true)
-          props.setUser(response.data)
+          props.setUser(response.data.username)
       }
   });
 }

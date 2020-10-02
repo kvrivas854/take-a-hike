@@ -58,7 +58,7 @@ class Search extends Component {
         console.log(event.target.dataset.id);
         console.log(this.state.results[event.target.dataset.id]);
         let data={
-            username: this.user,
+            username: this.props.user,
             trailID:this.state.results[event.target.dataset.id].id,
             Name:this.state.results[event.target.dataset.id].name,
             Summary:this.state.results[event.target.dataset.id].summary,
@@ -69,9 +69,15 @@ class Search extends Component {
             ConditionStatus:this.state.results[event.target.dataset.id].conditionStatus
             //password:password
         }
+        console.log(data)
         API.addTrail(data).then(response=>{
             if(response){
             console.log("entered in database")
+            }
+        })
+        API.getSaved(data).then(response => {
+            if (response) {
+                console.log(response)
             }
         })
     }

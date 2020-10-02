@@ -40,6 +40,9 @@ export default {
 
     addTrail:function(data){
         return axios.post("/api/trails/trails", data)
+    },
 
+    getSaved: function(data) {
+        return axios.post("/api/trails/saved", data)
     }
 }
