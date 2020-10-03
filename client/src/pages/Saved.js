@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import API from "../utils/API";
-import Card from "../components/Card";
+import SavedCard from "../components/SavedCard";
 
 class Saved extends Component {
     state = {
@@ -43,7 +43,7 @@ class Saved extends Component {
             
             {this.state.results.map((trail)=>{
                 return (
-                <Card trailName={trail.Name} summary={trail.Summary} button={this.state.button}/>
+                <SavedCard trailName={trail.Name} summary={trail.Summary} button={this.state.button}/>
                  
                 )
              })}
