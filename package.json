@@ -19,8 +19,8 @@
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && yarn run start:prod || yarn run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn run client\"",
+    "start:prod": "node index.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*' NODE_OPTIONS=--max-http-header-size=1000000\" \"yarn run client\"",
     "client": "cd client && yarn run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && yarn install",

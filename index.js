@@ -4,7 +4,7 @@ var db = require("./models");
 const routes = require("./routes");
 const app = express();
 const passport = require("./config/passport");
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 8080;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -25,7 +25,7 @@ app.use(routes);
 // require("./routes/api/index.js")(app);
 
 // Start the API server {force: true}
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
     });
