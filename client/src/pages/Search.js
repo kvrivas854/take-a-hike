@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import API from "../utils/API";
 import SearchCity from "../components/SearchCity";
 import Card from "../components/Card";
 import WeatherCard from "../components/WeatherCard";
-
 
 
 class Search extends Component {
@@ -14,12 +13,19 @@ class Search extends Component {
         weather: [],
         place: "",
         trailName: "",
-        user: this.props.user
-    }
+        user: this.props.user,
+        button: "Save"
+    };
+
+   
 
    handleInputChange = event => {
        this.setState({
         [event.target.name]:event.target.value
+       });
+       
+       this.setState({
+           user:this.props.user
        });
    };
 
@@ -32,22 +38,22 @@ class Search extends Component {
          this.setState({lat: res.data.results[0].location.lat})
          this.setState({lon: res.data.results[0].location.lng})
          this.setState({place: res.data.results[0].address})
-         console.log(res.data.results[0].address)
-         console.log(this.state.lat)
-         console.log(this.state.lon)
+        //  console.log(res.data.results[0].address)
+        //  console.log(this.state.lat)
+        //  console.log(this.state.lon)
      }).then(() => {
          let data={}
      API.getLocation(this.state.lat, this.state.lon)
         .then(res => {
-            console.log("trail return");
-            console.log(res);
+            // console.log("trail return");
+            // console.log(res);
             this.setState({results: res.data.trails})
         });
      API.getWeather(this.state.lat, this.state.lon)
         .then(res => {
-            console.log("weather return");
+            // console.log("weather return");
             this.setState({weather: res.data.daily})
-            console.log(this.state.weather)
+            // console.log(this.state.weather)
         })
      }
      )
@@ -58,7 +64,7 @@ class Search extends Component {
         console.log(event.target.dataset.id);
         console.log(this.state.results[event.target.dataset.id]);
         let data={
-            username: this.props.user,
+            username: this.state.user,
             trailID:this.state.results[event.target.dataset.id].id,
             Name:this.state.results[event.target.dataset.id].name,
             Summary:this.state.results[event.target.dataset.id].summary,
@@ -69,23 +75,22 @@ class Search extends Component {
             ConditionStatus:this.state.results[event.target.dataset.id].conditionStatus
             //password:password
         }
-        console.log(data)
+
+        //console.log(data)
         API.addTrail(data).then(response=>{
             if(response){
-            console.log("entered in database")
+            // console.log("entered in database")
             }
-        })
-        API.getSaved(data).then(response => {
-            if (response) {
-                console.log(response)
-            }
-        })
+        });
+        
     }
+
+   
 
    render() {
        return (
             <div>
-                <form className="flex items-center justify-center max-w-md mx-auto mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
+                <form className="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
 
                 <SearchCity
                 handleFormSubmit={this.handleFormSubmit}
@@ -101,7 +106,8 @@ class Search extends Component {
                <div className="flex flex-wrap object-none object-center mb-4">
                {this.state.results.map((trail, index)=>{
                    return (
-                   <Card key={trail.id} index={index} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars} handleClick={this.handleClick}/>
+                   <Card 
+                   key={trail.id} index={index} trailName={trail.name} summary={trail.summary} image={trail.imgSmall} dif={trail.difficulty} loc={trail.location} type={trail.type} stars={trail.stars} handleClick={this.handleClick} button={this.state.button}/>
                     
                    )
                 })}
