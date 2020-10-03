@@ -4,6 +4,7 @@ import Header from './components/Header';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Search from './pages/Search'
 import Login from './pages/Login'
+import Saved from './pages/Saved'
 import './App.css';
 import RegistrationForm from './pages/Signup';
 
@@ -23,6 +24,10 @@ return (
    </Route>
    <Route exact path="/mainpage" render={(props) => (
     <Search {...props} user={user} />
+   )}>
+   </Route>
+   <Route exact path="/saved" render={(props) => (
+    <Saved {...props} user={user} />
    )}>
    </Route>
    <Route exact path="/signup" render={(props) => (
