@@ -56,3 +56,8 @@
 .object-center {
   object-fit: center;
 }
+
+.w-max-content {
+  width: max-content;
+
+}
