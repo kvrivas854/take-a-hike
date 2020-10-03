@@ -1,9 +1,9 @@
-import React, { Component, useContext } from "react";
+import React, { Component } from "react";
 import API from "../utils/API";
 import SearchCity from "../components/SearchCity";
 import Card from "../components/Card";
 import WeatherCard from "../components/WeatherCard";
-import Login from "./Login";
+
 
 
 class Search extends Component {
@@ -85,7 +85,7 @@ class Search extends Component {
    render() {
        return (
             <div>
-                <form className="flex items-center justify-center max-w-md mx-auto flex mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
+                <form className="flex items-center justify-center max-w-md mx-auto mt-10 border rounded-lg flex-wrap bg-green-900 p-8 shadow-xl">
 
                 <SearchCity
                 handleFormSubmit={this.handleFormSubmit}

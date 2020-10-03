@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Header() {
 return (
     <nav className="flex items-center lobster justify-center flex-wrap bg-green-900 p-6">
@@ -32,7 +33,7 @@ return (
     <Link to="/contact" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Contact</Link>
   </div>
   <div>
-    <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white ml-5 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</Link>
+    <Link to="/" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white ml-5 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</Link>
   </div>
   <div>
     <Link to="/signup" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white ml-5 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Sign Up</Link>

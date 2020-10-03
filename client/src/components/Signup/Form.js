@@ -9,7 +9,7 @@ function Form(props) {
                     
                 <label className="p-2">Username</label>
                  <input type="username" 
-                       className="form-control text-black px-4  flex justify-center rounded-full focus: outline-none focus:shadow-outline" 
+                       className="form-control text-black px-4  flex justify-center rounded-full focus:outline-none focus:shadow-outline" 
                        name="username" 
                        placeholder="Enter Username" 
                        onChange={props.handleInputChange}
@@ -18,7 +18,7 @@ function Form(props) {
                 
                     <label className="p-2" htmlFor="exampleInputPassword1">Password</label>
                     <input type="password" 
-                        className="form-control px-4 text-black flex justify-center rounded-full focus: outline-none focus:shadow-outline" 
+                        className="form-control px-4 text-black flex justify-center rounded-full focus:outline-none focus:shadow-outline" 
                         name="password" 
                         placeholder="Password"
                         onChange={props.handleInputChange} 
@@ -27,7 +27,7 @@ function Form(props) {
                 
                 <button 
                     type="submit" 
-                    className="bg-green-300 text-white px-4 m-4 justify-center rounded-full hover:bg-green-500 focus: outline-none focus:shadow-outline"
+                    className="bg-green-300 text-white px-4 m-4 justify-center rounded-full hover:bg-green-500 focus:outline-none focus:shadow-outline"
                     onClick={props.handleSubmit}
                 >
                     Register

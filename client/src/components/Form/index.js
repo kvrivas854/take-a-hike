@@ -9,7 +9,7 @@ return (
         <form className="flex flex-col m-10" onSubmit={props.handleSubmit()}>
     
           <input
-            className="form-control px-4 m-4 flex justify-center rounded-full"
+            className="form-control px-4 m-4 flex justify-center rounded-full hover:bg-green-500 focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Username"
             name="username"
@@ -17,7 +17,7 @@ return (
           />
       
           <input
-            className="form-control px-4 m-4 flex  justify-center rounded-full"
+            className="form-control px-4 m-4 flex  justify-center rounded-full hover:bg-green-500 focus:outline-none focus:shadow-outline"
             type="password"
             placeholder="Password"
             name="password"
