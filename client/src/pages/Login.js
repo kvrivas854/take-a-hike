@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import Form from "../components/Form";
 import { Redirect, Link } from "react-router-dom";
 import API from "../utils/API";
@@ -9,7 +9,7 @@ function Login(props) {
     const [auth, setAuth] = useState(false);
 
     // useEffect(()=>{
-        if(auth){
+        if(auth === true){
         return <Redirect to="/mainpage"/>
         }
     // },[auth])
@@ -62,7 +62,7 @@ function handleSubmit(e){
     <Link to="/" className="items-center text-xl tracking-tight">Take a Hike</Link>
   </div>
         <Form handleInputChange={handleInputChange} handleSubmit={()=>handleSubmit}/>
-        <a className="flex text-white justify-center"href="/signup">Don't have an account? Click here to sign up!</a>
+        <a className="flex text-white justify-center" href="/signup">Don't have an account? Click here to sign up!</a>
         </nav>
         
 
