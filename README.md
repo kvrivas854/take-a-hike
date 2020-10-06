@@ -27,7 +27,6 @@ This application has great potential to become a unique and valuable resource. F
 - Add in custom user ratings, i.e. personal user reviews.
 - Implement higher security for user information, such as username and password.
 - Add logout functionality.
-Many of these areas for future development rely on exploring alternative brewery APIs that are more robust than Open Brewery DB.
 
 ### Notes
 
