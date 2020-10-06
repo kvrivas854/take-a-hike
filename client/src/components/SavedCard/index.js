@@ -13,9 +13,8 @@ function SavedCard (props) {
                         <p className="rounded p-2 text-base">{props.summary}</p>
                     </div>
                  </div>
-                 <h3 className="">{props.condition}</h3>
-                 <h3 className="">{props.ascent}</h3>
-                 <h3 className="">{props.length}</h3>
+                 <h3 className="rounded p-2 text-base">Condition: {props.condition}</h3>
+                 <h3 className="rounded p-2 text-base">{props.length} mi</h3>
             </div>
             <div className=" bg-gray-100 px-6 pt-4 pb-2 hover:bg-gray-500 focus:outline-none focus:shadow">
                 <span className="inline-block bg-white-200 rounded-full px-3 py-1 text-sm font-semibold text-black-200 mr-2 mb-2">{props.loc}</span>

@@ -8,19 +8,10 @@ module.exports = function(sequelize, DataTypes) {
       Location: DataTypes.STRING,
       Ascent: DataTypes.INTEGER,
       Length: DataTypes.DECIMAL,
-      ConditionStatus: DataTypes.STRING
-      
-      // saved: {
-      //   type: DataTypes.BOOLEAN,
-      //   defaultValue: false
-      // }
+      ConditionStatus: DataTypes.STRING,
+      type: DataTypes.STRING,
+      difficulty: DataTypes.STRING
     });
-
-    //   Trail.associate = function(models) {
-    //     Trail.belongsTo(models.User, { through: "FavoriteTrails"});
-    // }
-
-    //Trail.belongsTo(User, { foreignKey: 'userID' });
 
     return Trail;
   };
