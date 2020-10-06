@@ -18,7 +18,7 @@
     "sequelize": "^5.15.1"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm start:prod || npm start:dev",
+    "start": "if-env NODE_ENV=production && npm start",
     "start:prod": "node index.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*' NODE_OPTIONS=--max-http-header-size=1000000\" \"npm run client\"",
     "client": "cd client && npm start",
