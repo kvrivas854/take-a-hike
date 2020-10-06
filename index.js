@@ -41,12 +41,12 @@ app.use(passport.session());
 
 app.use(routes);
 
-app.use(timeout(15000));
-app.use(haltOnTimedout);
+// app.use(timedout(15000));
+// app.use(haltOnTimedout);
 
-function haltOnTimedout(req, res, next) {
-    if (!req.timedout) next();
-}
+// function haltOnTimedout(req, res, next) {
+//     if (!req.timedout) next();
+// }
 // require("./routes/api/index.js")(app);
 
 // Start the API server {force: true}
