@@ -17,6 +17,12 @@ app.use(express.json());
 // }
 
 // Add routes, both API and view
+if (process.env.NODE_ENV === "production"{
+  app.use(express.static("build"));
+  app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+  });
+} 
 
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
