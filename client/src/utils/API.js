@@ -29,7 +29,6 @@ export default {
     },
 
     login:function(data){
-        console.log("MADE IT TO THE LOGIN ROUTE")
         return axios.post("/api/trails/login", data)
 
     },
@@ -42,7 +41,11 @@ export default {
         return axios.post("/api/trails/trails", data)
     },
 
-    getSaved: function(data) {
+    getSaved:function(data) {
         return axios.post("/api/trails/saved", data)
+    },
+
+    clearAll:function(data) {
+        return axios.post("/api/trails/clearall", data)
     }
 }

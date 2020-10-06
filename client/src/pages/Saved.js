@@ -34,6 +34,14 @@ class Saved extends Component {
         
     };
 
+    handleClick = event => {
+        event.preventDefault();
+        //let data = {username:this.state.user}
+        //API.clearAll(data).then(response=>{
+            console.log("deleted trails from db")
+       // });
+    }
+
     render(){
         
         return(
@@ -41,11 +49,11 @@ class Saved extends Component {
             
             {this.state.results.map((trail)=>{
                 return (
-                <SavedCard type={trail.type} dif={trail.difficulty} length={trail.Length} loc={trail.Location} trailName={trail.Name} summary={trail.Summary} stars={trail.Stars} condition={trail.ConditionStatus}/>
+                <SavedCard type={trail.type} dif={trail.difficulty} length={trail.Length} loc={trail.Location} trailName={trail.Name} summary={trail.Summary} stars={trail.Stars} condition={trail.ConditionStatus} handleClick={this.handleClick}/>
                  
                 )
              })}
-             
+             {/* <button handleClick={this.handleClick}>Clear all</button> */}
         </div>
         
     )}

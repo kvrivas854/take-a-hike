@@ -73,4 +73,15 @@ router.delete("/:id", function(req, res) {
     });
   });
 
+  router.post("/clearall", function(req, res) {
+    // Delete the Author with the id available to us in req.params.id
+    db.Trail.destroy({
+      where: {
+        username: req.body.username
+      }
+    }).then(function(dbTrail) {
+      res.json(dbTrail);
+    });
+  });
+
 module.exports = router

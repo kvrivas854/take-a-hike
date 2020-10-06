@@ -20,9 +20,9 @@ function SavedCard (props) {
                 <span className="inline-block bg-white-200 rounded-full px-3 py-1 text-sm font-semibold text-black-200 mr-2 mb-2">{props.loc}</span>
                 <span className="inline-block bg-white-200 rounded-full px-3 py-1 text-sm font-semibold text-black-200 mr-2 mb-2">#{props.dif}</span>
                 <span className="inline-block bg-white-200 rounded-full px-3 py-1 text-sm font-semibold text-black-200 mr-2 mb-2">#{props.type}</span>
-
             </div>
         </div>
+        
     </div>
  )
 }

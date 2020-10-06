@@ -14,7 +14,6 @@ class Search extends Component {
         place: "",
         trailName: "",
         user: this.props.user,
-        button: "Save"
     };
 
    
