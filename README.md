@@ -46,3 +46,4 @@ API list:
 
 ### Credits
 Take a Hike was created by @kvrivas854, @sarahshea12, @cmaffei720, and @DiaG86. Feel free to contact us! :v:
+
