@@ -45,5 +45,4 @@ API list:
 - [Hiking Project](https://www.hikingproject.com/)   
 
 ### Credits
-Take a Hike was created by @kvrivas854, @sarahshea12, @cmaffei720, and @DiaG86. Feel free to contact us! :v:
-
+Take a Hike was created by @sarahshea12, @kvrivas854, @cmaffei720, and @DiaG86. Feel free to contact us! :v:
