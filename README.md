@@ -1,4 +1,4 @@
-# Brewery Map
+# Take a Hike
 
 Take a Hike is an application that maps hiking trails by specific locations entered by the end user. Users can search by city and be presented with a list of hiking trails to visit.
 
