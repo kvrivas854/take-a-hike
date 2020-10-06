@@ -31,8 +31,6 @@ class Saved extends Component {
             console.log("api call for saved");
             console.log(this.state.results);
         });
-
-        //console.log(this.state.user);
         
     };
 
@@ -43,7 +41,7 @@ class Saved extends Component {
             
             {this.state.results.map((trail)=>{
                 return (
-                <SavedCard trailName={trail.Name} summary={trail.Summary} button={this.state.button}/>
+                <SavedCard type={trail.type} dif={trail.difficulty} length={trail.Length} loc={trail.Location} trailName={trail.Name} summary={trail.Summary} stars={trail.Stars} condition={trail.ConditionStatus}/>
                  
                 )
              })}
