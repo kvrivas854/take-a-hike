@@ -13,6 +13,16 @@ app.use(express.json());
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("take-a-hike/src"));
 // }
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'BentleyBear8!',
+    database: 'takeahikedb'
+  });
+};
 // Add routes, both API and view
 
 app.use(
@@ -25,7 +35,7 @@ app.use(routes);
 // require("./routes/api/index.js")(app);
 
 // Start the API server {force: true}
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: true}).then(function() {
     app.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
     });
