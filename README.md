@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Brewery Map
 
-## Available Scripts
+Take a Hike is an application that maps hiking trails by specific locations entered by the end user. Users can search by city and be presented with a list of hiking trails to visit.
 
-In the project directory, you can run:
+[GitHub Pages Link](https://kvrivas854.github.io/take-a-hike/)
 
-### `yarn start`
+## Table of Contents
+- [Overview](#Overview)
+- [User Story](#User-Story)
+- [Future Development](#Future-Development)
+- [Notes](#Notes)
+- [Credits](#Credits)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Overview
+This application presents the user with local hiking trail locations, so that they can plan trips to these destinations accordingly.
+The user searches for locations by city, and hiking trails within that city's area are listed in under the search tab. Listed information includes the trail's name, rating, weather condition status, distance, difficulty level and short summary of the trail.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### User-Story
+As a frequent traveler and nature enthusiast, 
+I want to be able to locate local trails within a city, 
+so that I can plan in advance what hiking trails I should visit before I travel to a location.
 
-### `yarn test`
+### Future-Development
+This application has great potential to become a unique and valuable resource. Future development areas include:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Create a calendar add-on to schedule hiking trips according to weather conditions.
+- Add in custom user ratings, i.e. personal user reviews.
+- Implement higher security for user information, such as username and password.
+- Add logout functionality.
+Many of these areas for future development rely on exploring alternative brewery APIs that are more robust than Open Brewery DB.
 
-### `yarn build`
+### Notes
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instructions:
+1. When the user opens the browser they will be presented with a search form to search by zip code.
+2. User enters the zip code of their intended travel destinations and presses the search button.
+3. Search results are listed below the map and markers placed on their location.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+CSS
+- The CSS is linked using an external style sheet and utilizes [Tailwind Css](https://tailwindcss.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+API list:
+- [OpenWeather](https://openweathermap.org/)
+- [GeoCoding](https://rapidapi.com/trueway/api/trueway-geocoding)
+- [Hiking Project](https://www.hikingproject.com/)   
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Credits
+Take a Hike was created by @kvrivas854, @sarahshea12, @cmaffei720, and @DiaG86. Feel free to contact us! :v:
