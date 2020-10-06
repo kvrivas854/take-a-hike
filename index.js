@@ -17,7 +17,7 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'ip-10-1-0-237',
     user: 'root',
     password: 'BentleyBear8!',
     database: 'takeahikedb'
