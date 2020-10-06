@@ -12,6 +12,7 @@ function Login(props) {
         if(auth === true){
         return <Redirect to="/mainpage"/>
         }
+        
     // },[auth])
 
 function handleInputChange(e){
