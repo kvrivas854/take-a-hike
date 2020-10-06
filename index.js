@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 // if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("take-a-hike/src"));
+//   app.use(express.static("client/src"));
 // }
 
 // Add routes, both API and view
@@ -28,7 +28,7 @@ if (process.env.JAWSDB_URL) {
         port: 3306,
         host: 'localhost',
         user: 'root',
-        password: process.env.SQLPASSWORD,
+        password: process.env.dbpassword,
         database: 'takeahikedb'
     })
 };

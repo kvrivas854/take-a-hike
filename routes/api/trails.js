@@ -3,9 +3,6 @@ var router = require('express').Router();
 const passport = require("../../config/passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-// const booksController = require("../../controllers/booksController");
-
-
     router.post("/saved", (req, res) => {
         db.Trail.findAll({
           where: {
@@ -44,11 +41,6 @@ router.delete("/:id", function(req, res) {
     });
   });
   
-//   router.post("/api/login",passport.authenticate('local'),(req,res)=>{
-// if(req.user){
-//   res.json({username:req.user.username,id:req.user.id})
-// }  
-//   })
   router.put("/:id", function(req, res) {
     db.Trail.update(
       req.body,
@@ -80,13 +72,5 @@ router.delete("/:id", function(req, res) {
       res.json(dbPost);
     });
   });
-
-  // router.get("/login", (req, res) => {
-  //   // Sending back a password, even a hashed password, isn't a good idea
-  //   console.log(req.body);
-  //   db.User.create(req.body).then(function(dbPost) {
-  //     res.json(dbPost);
-  //   });
-  // });
 
 module.exports = router
