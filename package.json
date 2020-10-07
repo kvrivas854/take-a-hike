@@ -2,6 +2,7 @@
   "name": "take-a-hike",
   "version": "1.0.0",
   "main": "index.js",
+  "root": "build/",
   "repository": "https://github.com/kvrivas854/take-a-hike.git",
   "author": "Chris Maffei <cmaffei720@gmail.com>",
   "license": "MIT",
