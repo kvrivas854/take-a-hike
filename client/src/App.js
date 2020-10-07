@@ -38,7 +38,7 @@ return (
      <RegistrationForm />
    </Route>
    <Route exact path="/contact">
-     <Contact/>
+     
      </Route>
      <Route exact path="/about">
      <About/>

@@ -30,7 +30,7 @@ return (
   </div>
   <div className="flex justify-center">
   <div>
-    <Link to="/contact" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Contact</Link>
+    {/* <Link to="/contact" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Contact</Link> */}
   </div>
   <div>
     <Link to="/" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white ml-5 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</Link>

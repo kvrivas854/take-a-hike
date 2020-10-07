@@ -62,7 +62,7 @@ function About (props) {
                         <img src={process.env.PUBLIC_URL + '/adia.jpg'} alt="img" className="p-2 h-32 w-32 rounded-full"/> 
                         <div className="flex flex-col">
                             <h4 className="p-2 font-bold">Adia Grisby</h4>
-                            <p className="rounded p-2 text-base">Kellyv.rivas@gmail.com</p>
+                            <p className="rounded p-2 text-base">adia.grigsby@gmail.com</p>
                             <div className="flex">
                                 <a className="w-max-content font-bold py-1 px-4 mt-4 rounded" rel="noreferrer" target="_blank" href="https://github.com/DiaG86">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
